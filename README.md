@@ -2,4 +2,4 @@ This repository provides a simple Python script to compute factor scores based o
 
 The approach is based on volBrain’s Brain Structure Ages pipeline, using brain age gap values (i.e., brain age minus chronological age) for individual brain regions as input.
 
-Your input .csv file should contain one row per subject and one column per brain region (named in the same format as our provided *coefs.csv), with brain age gap values (not raw brain ages). An optional SubjectID column will be retained in the output.
+In addition to the scoring weights, the script uses region-specific means and standard deviations from our reference cohort (N=188) to standardize your input data before applying the factor scoring coefficients. This ensures consistency with the original scale used to derive the factors. If you have a large enough dataset, you can modify this to calculate it based on the means and standard deviations of your own data.
